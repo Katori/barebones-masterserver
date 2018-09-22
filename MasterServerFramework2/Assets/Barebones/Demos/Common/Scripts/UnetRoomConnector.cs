@@ -3,7 +3,7 @@ using System.Collections;
 using Barebones.Logging;
 using Barebones.MasterServer;
 using UnityEngine;
-using UnityEngine.Networking;
+using Mirror;
 using UnityEngine.Networking.NetworkSystem;
 using UnityEngine.SceneManagement;
 
@@ -131,7 +131,7 @@ public class UnetRoomConnector : RoomConnector
         Logger.Info("Connected to game server, about to send access");
         
         // Connected, send the token
-        NetworkManager.client.connection.Send(UnetGameRoom.AccessMsgType, new StringMessage(access.Token));
+        NetworkManager.client.connection.Send(UnetGameRoom.AccessMsgType, new Mirror.StringMessage(access.Token));
 
         // While connected
         while (NetworkManager.IsClientConnected())

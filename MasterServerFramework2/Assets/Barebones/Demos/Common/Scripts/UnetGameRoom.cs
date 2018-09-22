@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Barebones.Logging;
 using Barebones.MasterServer;
 using UnityEngine;
-using UnityEngine.Networking;
-using UnityEngine.Networking.NetworkSystem;
+using Mirror;
 using UnityEngine.SceneManagement;
 
 /// <summary>

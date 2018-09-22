@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Barebones.MasterServer;
-using UnityEngine.Networking;
+using Mirror;
 using UnityEngine.UI;
 
 public class ZonePortal : NetworkBehaviour

@@ -1,7 +1,7 @@
 ﻿using System;
 using Barebones.MasterServer;
 using UnityEngine;
-using UnityEngine.Networking;
+using Mirror;
 
 namespace Barebones.Utils
 {
@@ -33,14 +33,6 @@ namespace Barebones.Utils
             byte g = byte.Parse(hex.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             byte b = byte.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
             return new Color32(r, g, b, 255);
-        }
-
-        public static ConnectionConfig CreateDefaultConnectionConfig()
-        {
-            var config = new ConnectionConfig();
-            config.AddChannel(QosType.ReliableSequenced);
-            config.AddChannel(QosType.Unreliable);
-            return config;
         }
 
     }

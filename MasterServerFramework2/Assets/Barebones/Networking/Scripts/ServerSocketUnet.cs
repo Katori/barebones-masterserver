@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
+using Mirror;
 
 namespace Barebones.Networking
 {
@@ -22,14 +22,9 @@ namespace Barebones.Networking
         public event PeerActionHandler Connected;
         public event PeerActionHandler Disconnected;
 
-        public ServerSocketUnet() : this(BarebonesTopology.Topology)
-        {
-        }
-
-        public ServerSocketUnet(HostTopology topology)
+        public ServerSocketUnet()
         {
             _connectedPeers = new Dictionary<int, PeerUnet>();
-            _topology = topology;
 
             _msgBuffer = new byte[NetworkMessage.MaxMessageSize];
         }
